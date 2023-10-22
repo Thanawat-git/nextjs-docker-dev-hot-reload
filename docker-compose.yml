@@ -1,0 +1,12 @@
+# standalone for dev mode
+version: '3'
+
+services:
+  frontend:
+    build: 
+      context: .             # Use the current directory as the build context
+      dockerfile: Dockerfile # Use the Dockerfile you created
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app      # Use a bind mount to synchronize code changes
